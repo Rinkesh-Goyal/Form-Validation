@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Form Validation</title>
+</head>
+<body>
+
+        <div class="container">
+            <form>
+                <div class="heading">
+                    <h3>Please fill in this form.</h3> 
+                </div>
+            <table>
+                <tr>
+                    <th>
+                        <label for="name"><b>Name</b></label>
+                    </th>
+                    <th>
+                        <input type="text" placeholder="Enter Name" name="name" id="name" required>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="email"><b>Email</b></label>             
+                    </th>
+                    <th>
+                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="country"><b>Country</b></label>           
+                    </th>
+                    <th>
+                        <input type="text" placeholder="Select Country" name="country" id="country" required>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="zipcode"><b>Zip Code</b></label>
+                    </th>
+                    <th>
+                        <input type="text" placeholder="Select Zip Code" name="zip" id="zip" required>            
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="psw"><b>Password</b></label>
+                    </th>
+                    <th>
+                        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>             
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label for="psw-repeat"><b>Repeat Password</b></label>
+                    </th>
+                    <th>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                    </th>
+                </tr>
+            </table>
+            
+            <div class="accept">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" required>
+                <label for="vehicle1">
+                    By creating an account you agree to our <a href="#">Terms & Privacy</a>.
+                </label><br>
+            </div>        
+                
+            <div class="button">
+                <button type="submit" class="registerbtn" onclick="validateForm()">Register</button>                 
+            </div>
+        </form>    
+        </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
