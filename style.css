@@ -1,9 +1,11 @@
 .container{
     border: 2px solid black;
-    width: 30%;
+    width: 55%;
     margin-top: 180px;
-    margin-left: 500px;
+    margin-left: 400px;
 }
+
+
 
 table {
     font-family: arial, sans-serif;
@@ -29,4 +31,20 @@ th {
 }
 .heading{
     text-align: center;
+}
+
+.country{
+    width: auto;
+}
+
+.error{
+    font-size: small;
+    font-weight: normal;
+    color: red;
+    margin-left: 7px;
+    visibility: visible;
+}
+
+.error.active{
+    visibility:hidden;
 }

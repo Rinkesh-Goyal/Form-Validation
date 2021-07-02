@@ -5,6 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="gettext" type="application/x-po" href="languages/en/LC_MESSAGES/en.po" />
     <title>Form Validation</title>
 </head>
 <body>
@@ -20,15 +24,15 @@
                         <label for="name"><b>Name</b></label>
                     </th>
                     <th>
-                        <input type="text" placeholder="Enter Name" name="name" id="name" required>
+                        <input type="text" placeholder="Enter Name" name="name" id="name" required><span id="nameloc" class="error"></span>
                     </th>
                 </tr>
                 <tr>
                     <th>
-                        <label for="email"><b>Email</b></label>             
+                        <label for="email"><b>Email</b></label>          
                     </th>
                     <th>
-                        <input type="text" placeholder="Enter Email" name="email" id="email" required>
+                        <input type="text" placeholder="Enter Email" name="email" id="email" required><span id="emailloc" class="error"></span>  
                     </th>
                 </tr>
                 <tr>
@@ -36,7 +40,17 @@
                         <label class="country"><b>Country</b></label>           
                     </th>
                     <th>
-                        <input type="text" placeholder="Select Country" name="country" id="country" required>
+                        <!-- <input type="text" placeholder="Select Country" name="country" id="country" required> -->
+                        <select class="gds-cr" country-data-region-id="gds-cr-one" id="country" data-language="en"></select><span id="countryloc" class="error"></span>
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="state"><b>State</b></label>          
+                    </th>
+                    <th>
+                        <!-- <input type="text" placeholder="Select State" name="state" id="state" required> -->
+                        <select id="gds-cr-one" class = "state"></select><span id="stateloc" class="error"></span> 
                     </th>
                 </tr>
                 <tr>
@@ -44,7 +58,7 @@
                         <label class="zipcode"><b>Zip Code</b></label>
                     </th>
                     <th>
-                        <input type="text" placeholder="Select Zip Code" name="zip" id="zip" required>            
+                        <input type="text" placeholder="Select Zip Code" name="zip" id="zip" required><span id="ziploc" class="error"></span>            
                     </th>
                 </tr>
                 <tr>
@@ -52,7 +66,7 @@
                         <label for="psw"><b>Password</b></label>
                     </th>
                     <th>
-                        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>             
+                        <input type="password" placeholder="Enter Password" name="psw" id="psw" required><span id="passwordloc" class="error"></span>             
                     </th>
                 </tr>
                 <tr>
@@ -60,23 +74,25 @@
                         <label for="psw-repeat"><b>Repeat Password</b></label>
                     </th>
                     <th>
-                        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+                        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required><span id="password-repeatloc" class="error"></span>
                     </th>
                 </tr>
             </table>
             
             <div class="accept">
-                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" required>
-                <label for="vehicle1">
+                <input type="checkbox" id="condition" name="condition" value="#" required>
+                <label for="condition">
                     By creating an account you agree to our <a href="#">Terms & Privacy</a>.
                 </label><br>
             </div>        
                 
             <div class="button">
-                <button type="submit" class="registerbtn" onclick="validateForm()">Register</button>                 
+                <input type="button" class="registerbtn" onclick="validateForm()" value="Register">                 
             </div>
         </form>    
         </div>
     <script type="text/javascript" src="script.js"></script>
+    <script src="geodatasource-cr.min.js"></script>
+    <script type="text/javascript" src="Gettext.js"></script>
 </body>
 </html>
